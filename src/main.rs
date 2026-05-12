@@ -14,9 +14,7 @@ impl MessageHandler<UserCreatedEventMessage> for UserCreatedHandler {
     fn handle(&self, message: Box<UserCreatedEventMessage>) -> Result<(), HandleError> {
         let ten_millis = time::Duration::from_millis(1000);
 
-        // thread::sleep(ten_millis);
-        let _ = ten_millis;
-        let _ = thread::current();
+        thread::sleep(ten_millis);
 
         println!(
             "In Rifqy's Computer [2406422922]. Message received: {:?}",
